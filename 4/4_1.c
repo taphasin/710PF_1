@@ -4,24 +4,29 @@ int main()
 {
     int even = 0, odd = 0, sum,a[10];
     printf("input : ");
-    for (int s = 0 ; s < 10 ; s++)
+    for (int s = 1 ; s <= 10 ; s++)
     {
         scanf("%d", &a[s]);
     }
-    // scanf("%d", a);
-    for(int i = 0; i < 10; i++)
+    
+    printf("Data in array : ");
+    for (int p = 1; p <= 10; p++)
     {
-        if (i % 2 == 0)
+        printf(" %d", a[p]);
+    }
+
+    for(int i = 1; i <= 10; i++)
+    {
+        if (a[i] % 2 == 0)
         {
-            odd = odd + a[i];
+            even = even + i;
         }
         else
         {
-            even = even + a[i];
+            odd = odd + i;
         }
     }
-    //printf("%d %d", odd, even);
     sum = odd - even;
-    printf("%d", sum);
+    printf("\n%d", sum);
     return 0;
 }

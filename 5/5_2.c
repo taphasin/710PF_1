@@ -1,18 +1,26 @@
 #include <stdio.h>
 
+int fac(int c)
+{
+    int b = c;
+    for (int i = 1; i < c; i++){
+        b = b * (c - i);
+    }
+    return b;
+}
+
+
 int main()
 {
-    int ls[5], a;
+    int a, result;
     printf("input num : ");
-    for (int i = 0; i <= 4; i++){
-        scanf("%d", &ls[i]);
+    scanf("%d", &a);
+    if (a < 0)
+    {
+        printf("negative alert");
+        return 0;
     }
-    a = ls[0];
-    for (int c = 0; c <= 4; c++){
-        if (a < ls[c]){
-            a = ls[c];
-        }
-    }
-    printf("%d", a);
+    result = fac(a);
+    printf("%d", result);
     return 0;
 }

@@ -21,6 +21,6 @@ int main()
         return 0;
     }
     result = fac(a);
-    printf("%d", result);
+    printf("factorial is : %d", result);
     return 0;
 }

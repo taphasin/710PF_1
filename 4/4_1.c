@@ -26,7 +26,8 @@ int main()
             odd = odd + i;
         }
     }
-    sum = odd - even;
-    printf("\n%d", sum);
+    sum = even - odd;
+    printf("\nResult: ");
+    printf("%d", sum);
     return 0;
 }
